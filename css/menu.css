@@ -1,0 +1,68 @@
+body {
+    background-image: #ffffff;
+    color: #000000; 
+}
+
+.header-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 4rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.style-img {
+    width: calc(90% - 4rem);
+    height: 50vh;
+    margin: 3.5rem auto;
+    display: block;
+}
+
+nav {
+    margin-left: 8rem;
+    
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+
+}
+
+div.name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: "Dancing Script", "Satisfy", "Allura", "Pacifico", "Kaushan Script","Cookie", cursive;
+    user-select: none;
+
+}
+
+ul {
+    display: flex;
+    gap: 8vw;
+    list-style: none;
+}
+
+ul li {
+    transition: transform 0.15s ease; 
+}
+
+ul li a{
+    transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+ul li a:hover{
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+ul li:hover {
+    transform: scale(1.2);
+}
+
+a {
+    text-decoration: none;
+    color: #060606;
+}
