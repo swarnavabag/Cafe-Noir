@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
@@ -11,26 +12,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
+    overscroll-behavior: none;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    padding-right: 4rem;
-}
-
-nav {
-    margin-left: 8rem;
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-
+    padding: 1rem 4rem;
 }
 
 div.name {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     font-family: "Dancing Script", "Satisfy", "Allura", "Pacifico", "Kaushan Script","Cookie", cursive;
     user-select: none;
@@ -48,6 +41,9 @@ ul li {
 }
 
 ul li a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     transition: color 0.15s ease, text-decoration 0.15s ease;
 }
 
@@ -73,7 +69,7 @@ main {
 }
 
 .greeting {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: left;
     font-family: "Dancing Script", "Satisfy", "Allura", "Pacifico", "Kaushan Script","Cookie", cursive;
     color: #c8ff00;
@@ -87,7 +83,7 @@ main {
 }
 
 .description {
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: inline-block;
     white-space: nowrap;
     margin-top: 2.5rem;
@@ -107,9 +103,9 @@ main {
 }
 
 .booking, .menu {
-    padding: 1rem 2rem;
-    border-radius: 1.8rem;
-    font-size: 1.2rem;
+    padding: 1.5rem 2.5rem;
+    border-radius: 2.5rem;
+    font-size: 1.5rem;
     white-space: nowrap;
     background-color: #00eeff;
     border: none;
@@ -134,7 +130,7 @@ footer {
 }
 
 .contact {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -155,8 +151,8 @@ footer {
 }
 
 .phone-icon, .email-icon {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .phone:hover {
@@ -177,7 +173,7 @@ footer {
     margin-left: 2rem;
     margin-right: 2rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: "Pacifico", "Kaushan Script","Cookie", cursive;
     white-space: nowrap;
     word-spacing: 0.3rem;
@@ -191,20 +187,20 @@ footer {
 }
 
 .facebook-icon {
-    width: 2rem;
-    height: 2rem;
-    transition: transform 0.15s ease;
-}
-
-.youtube-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     transition: transform 0.15s ease;
 }
 
 .instagram-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.15s ease;
+}
+
+.youtube-icon {
+    width: 3rem;
+    height: 3rem;
     transition: transform 0.15s ease;
 }
 
