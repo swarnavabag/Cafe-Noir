@@ -27,12 +27,28 @@
 
         <div class="cafe-name animate__animated animate__fadeInRight">Café Noir</div>
 
-        <p class="description animate__animated animate__zoomIn">Step into a world where every sip is a journey, every aroma tells a story, and every moment is crafted to brighten<br>your day. Here, happiness is brewed with care, and memories are stirred with every cup.</p>
+        <p class="description animate__animated animate__zoomIn">Step into a world where every bite is a journey, every aroma tells a story, and every moment is crafted to brighten your day. Here, happiness is brewed with care, and memories are stirred with every cup.</p>
+
+        <!-- Hidden checkbox -->
+        <input type="checkbox" id="popup-toggle" hidden>
 
         <div class="buttons animate__animated animate__fadeInDown">
-            <button class="booking" onclick="location.href='booking.html'">Book Now</button>
+            
+            <!-- Book Now triggers popup -->
+            <label for="popup-toggle" class="booking">Book Now</label>
 
             <button class="menu" onclick="location.href='menu.html'">View Menus</button>
+        </div>
+
+        <!-- Popup -->
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <h2>Welcome!</h2>
+                <p>This is a popup message.</p>
+
+                <!-- Close popup -->
+                <label for="popup-toggle" id="closePopupBtn">Close</label>
+            </div>
         </div>
     </main>
 
@@ -49,7 +65,7 @@
             </div>
         </div>
         
-        <div class="tagline animate__animated animate__fadeInUp">Where Every Sip Feels Like Home</div>
+        <div class="tagline animate__animated animate__fadeInUp">Where Every bite Feels Like Home</div>
 
         <div class="social-media animate__animated animate__backInRight">
             <a href="https://www.facebook.com/swarnavabag3" target="_blank">

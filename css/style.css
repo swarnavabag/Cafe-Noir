@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     background-image: url(../photos/home-background.jpg);
     background-size: cover;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     color: #ffffff;
     overscroll-behavior: none;
@@ -19,7 +20,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
 }
 
 div.name {
@@ -27,6 +27,7 @@ div.name {
     font-weight: bold;
     font-family: "Dancing Script", "Satisfy", "Allura", "Pacifico", "Kaushan Script","Cookie", cursive;
     user-select: none;
+    padding-left: 2rem
 
 }
 
@@ -85,7 +86,6 @@ main {
 .description {
     font-size: 2rem;
     display: inline-block;
-    white-space: nowrap;
     margin-top: 2.5rem;
     color: #fcf469;
     font-family:'Dancing Script', cursive;
@@ -119,6 +119,59 @@ main {
     color: #ffffff;
     transform: scale(1.2);
 }
+
+/* Hide checkbox */
+#popup-toggle {
+  display: none;
+}
+
+/* Default popup hidden */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+
+/* Show popup when checkbox checked */
+#popup-toggle:checked ~ #popup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#popup-toggle:checked ~ #popup .popup-content {
+  transform: scale(1);
+}
+
+/* Buttons */
+.booking, #closePopupBtn {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+}
+
 
 footer {
     display: flex;
@@ -215,3 +268,152 @@ footer {
 .youtube-icon:hover {
     transform: scale(1.3);
 }
+
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    div.name {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+        padding: 0;
+    }
+
+    ul li a {
+        font-size: 1.3rem;
+    }
+
+    main {
+        margin: 2rem 1.5rem;
+    }
+
+    .greeting {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .cafe-name {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        background-size: 120% 120%;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .booking, .menu {
+        font-size: 1.5rem;
+        padding: 1.2rem 2rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 2rem;
+    }
+
+    .contact {
+        font-size: 1.3rem;
+    }
+
+    .phone-icon, .email-icon {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
+
+    .social-media {
+        gap: 1.5rem;
+    }
+
+    .facebook-icon, .instagram-icon, .youtube-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    div.name {
+        font-size: 2.8rem;
+    }
+
+    ul li a {
+        font-size: 1.1rem;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .cafe-name {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    main {
+        margin: 1.5rem 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    .booking, .menu {
+        font-size: 1.3rem;
+        padding: 1.2rem 7.5rem;
+    }
+
+    footer {
+        gap: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .social-media {
+        gap: 1rem;
+    }
+
+    .facebook-icon, .instagram-icon, .youtube-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
