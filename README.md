@@ -15,6 +15,8 @@ Café Noir combines aesthetic UI design, smooth interactions, and clean layouts 
 
 **Website:** https://cafe-noir-website.netlify.app/
 
+**Repository:** https://github.com/swarnavabag/Cafe-Noir
+
 Visit the live website to explore the complete experience across desktop and mobile devices.
 
 ---
@@ -36,8 +38,6 @@ The design emphasizes whitespace, warm tones, and luxury-inspired styling to cre
 ---
 
 ## 📸 Screenshots
-
-Add screenshots here for:
 
 ### Home Page
 
@@ -67,6 +67,21 @@ Add screenshots here for:
 * Elegant typography using custom fonts
 * Optimized layout for desktop, tablet, and mobile devices
 * Live deployment using Netlify
+
+---
+
+## 📌 Version
+
+Current Release: v1.0
+
+Café Noir is currently released as a fully functional static frontend project built with HTML and CSS.
+
+Planned future upgrades may include:
+
+* JavaScript-based interactivity
+* Table reservation system
+* Backend integration
+* Advanced animations
 
 ---
 
@@ -193,8 +208,19 @@ This project helped me improve my understanding of:
 ### Swarnava Bag
 
 B.Sc. Computer Science Student
-Interested in AI/ML, Data Science, Software Engineering, and Frontend Development
+## 👨‍💻 Creator
+
+### Swarnava Bag
+
+B.Sc. Computer Science Student at Ramakrishna Mission Residential College, Narendrapur
+
+Interests:
+
+* AI / ML
+* Data Science
+* Software Engineering
+* Frontend Development
 
 [GitHub](https://github.com/swarnavabag)
 
-[LinkedIn](www.linkedin.com/in/swarnava-bag-24285435b)
+[LinkedIn](https://www.linkedin.com/in/swarnava-bag-24285435b/)
