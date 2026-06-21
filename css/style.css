@@ -1,23 +1,28 @@
 /* --------------------------------------------------
    Global Layout & Reset
    -------------------------------------------------- */
-html, body {
-    height: 100%;
+* {
     margin: 0;
-    overflow: auto; /* Allow natural page scrolling */
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Page base structure & background */
 body {
+    font-family: 'Poppins', sans-serif;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0,0)
+        ),
+        url(../photos/home_bg.jpg);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(../photos/home-background.jpg);
     background-size: cover;
-    background-attachment: scroll;
     background-repeat: no-repeat;
-    color: #ffffff;
-    overscroll-behavior: none; /* Prevent scroll bounce effect */
+    background-position: center;
 }
 
 /* --------------------------------------------------
@@ -27,274 +32,241 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem 4rem;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Brand / Cafe Name (Top left) */
-div.name {
-    font-size: 4.5rem;
-    font-weight: bold;
-    font-family: "Dancing Script","Satisfy","Allura","Pacifico","Kaushan Script","Cookie", cursive;
+.name {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
     user-select: none;
-    padding-left: 2rem;
 }
 
 /* Navigation links container */
-ul {
+nav ul {
     display: flex;
-    gap: 8vw; /* Responsive spacing based on viewport width */
+    gap: 3rem;
     list-style: none;
 }
 
-/* Nav item hover micro-interaction */
-ul li {
-    transition: transform 0.15s ease;
-}
-
 /* Nav link typography */
-ul li a {
-    font-family: 'Poppins', sans-serif;
+nav ul li a {
+    text-decoration: none;
+    color: white;
     font-weight: 600;
-    font-size: 1.5rem;
-    transition: color 0.15s ease, text-decoration 0.15s ease;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
 }
 
 /* Nav hover effects */
 ul li a:hover {
     color: #ffcc00;
-    text-decoration: underline;
-}
-ul li:hover {
-    transform: scale(1.2);
-}
-
-/* Universal anchor styling */
-a {
-    text-decoration: none;
-    color: #ffffff;
 }
 
 /* --------------------------------------------------
    Hero Section (Main intro area)
    -------------------------------------------------- */
-main {
+.main {
     flex: 1;
-    margin: 6rem 4rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 6rem;
 }
 
 /* "Welcome" / greeting text */
 .greeting {
+    font-family: 'Playfair Display', serif;
+    color: #C89B3C;
     font-size: 3rem;
-    font-family: "Dancing Script","Satisfy","Allura","Pacifico","Kaushan Script","Cookie", cursive;
-    color: #c8ff00;
-    margin-bottom: 1rem;
 }
 
-/* Cafe headline text */
-.cafe-name {
-    font-family: "Dancing Script","Satisfy","Allura","Pacifico","Kaushan Script","Cookie", cursive;
-    font-size: 3.5rem;
-    font-weight: bold;
-}
-
-/* Tagline / intro brush-stroke style text */
+/* Tagline */
 .description {
-    font-size: 2rem;
-    display: inline-block;
-    margin-top: 2.5rem;
-    color: #fcf469;
-    font-family:'Dancing Script', cursive;
-    background-image: url('brush-stroke.png');
-    background-size: 130% 130%;
-    background-repeat: no-repeat;
-    background-position: center;
+    font-family:'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #F5E6C8;
     line-height: 1.5;
 }
 
 /* --------------------------------------------------
    Primary CTA Buttons (Book & Menu)
    -------------------------------------------------- */
-.buttons {
+.btns {
     display: flex;
-    padding: 4rem;
-    gap: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 4rem;
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+    gap: 3rem;
 }
 
-/* 
-   Shared button base class
-   Used for: Book Now / View Menu
-   Maintains consistent UI/UX tone
-*/
-.booking, .menu {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 300px;
-    padding: 1.5rem 2.5rem;
-    border-radius: 2.5rem;
-    font-size: 1.5rem;
+.primary, .secondary {
     font-family: 'Poppins', sans-serif;
+    background-color: #b4551a;
+    color: #ffffff;
+    font-size: 1.5rem;
     font-weight: 600;
-    white-space: nowrap;
-    color: #000;
-    background-color: #00eeff;
+    width: clamp(180px, 20vw, 300px);
+    padding: 1rem 1.2rem;
+    border-radius: 2rem;
     border: none;
     cursor: pointer;
     text-align: center;
-    transition: background-color .3s ease, transform .2s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    transition: all 0.35s ease;
 }
 
 /* Button interaction feedback */
-.booking:hover, .menu:hover {
-    background-color: #02a8f5;
-    transform: scale(1.12);
+.primary:hover, .secondary:hover {
+    background-color: #d77131;
+    border: 2px solid #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.8);
 }
 
-/* --------------------------------------------------
-   Footer
-   -------------------------------------------------- */
+/* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw 3vh;
-}
-
-/* Contact information block */
-.contact {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* Phone + Email wrapper */
-.phone, .email {
-    display: flex;
-    gap: 0.5rem;
-    transition: transform 0.25s ease, color 0.25s ease, text-decoration 0.25s ease;
-}
-
-.phone-icon, .email-icon {
-    width: 2rem;
-    height: 2rem;
-}
-
-.phone:hover, .email:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
-}
-
-.number:hover {
-    color: #ffcc00;
-}
-
-/* Tagline under footer */
-.tagline {
-    margin: 0 2rem;
     text-align: center;
-    font-size: 1.6rem;
-    font-family: "Pacifico","Kaushan Script","Cookie", cursive;
-    white-space: nowrap;
-    word-spacing: 0.3rem;
-    user-select: none;
+    padding: 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
 }
 
-/* Social icon section */
-.social-media {
-    display: flex;
-    align-items: center;
-    gap: 2vw;
-}
-
-.facebook-icon, .instagram-icon, .youtube-icon {
-    width: 3rem;
-    height: 3rem;
-    transition: transform 0.15s ease;
-}
-
-.facebook-icon:hover, .instagram-icon:hover, .youtube-icon:hover {
-    transform: scale(1.3);
-}
-
-/* --------------------------------------------------
-   Responsive Design - Tablet (≤ 1024px)
-   -------------------------------------------------- */
 @media (max-width: 1024px) {
 
     header {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.1rem 0.2rem;
+        padding: 1rem 2rem;
     }
 
-    div.name { font-size: 3.5rem; text-align: center; }
+    .name {
+        font-size: 3rem;
+    }
 
-    ul {
+    nav ul {
         gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0;
     }
 
-    main { margin: 2rem 1.5rem; }
-
-    .greeting { font-size: 2.5rem; text-align: center; }
-    .cafe-name { font-size: 3rem; text-align: center; }
-    .description { font-size: 1.6rem; text-align: center; margin-top: 1.5rem; }
-
-    .buttons {
-        justify-content: center;
-        gap: 2rem;
+    nav ul li a {
+        font-size: 1.1rem;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
+    .main {
+        padding: 3rem 2rem;
     }
 
-    .facebook-icon, .instagram-icon, .youtube-icon {
-        width: 2.5rem;
-        height: 2.5rem;
+    .greeting {
+        font-size: 2.4rem;
+    }
+
+    .description {
+        font-size: 1.25rem;
+        max-width: 90%;
+    }
+
+    .btns {
+        gap: 1.5rem;
+        padding: 2rem 2rem;
     }
 }
 
-/* --------------------------------------------------
-   Responsive Design - Mobile (≤ 768px)
-   -------------------------------------------------- */
 @media (max-width: 768px) {
 
-    div.name { font-size: 2.8rem; }
-    ul li a { font-size: 1.1rem; }
+    * {
+        box-sizing: border-box;
+    }
 
-    .greeting { font-size: 2rem; }
-    .cafe-name { font-size: 2.5rem; }
-    .description { font-size: 1.4rem; }
+    body {
+        background-position: center;
+    }
 
-    main { margin: 1.5rem 1rem; }
-
-    /* Stack buttons vertically on mobile */
-    .buttons {
+    /* Header */
+    header {
         flex-direction: column;
-        gap: 2rem;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .name {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    nav {
         width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    /* Main content */
+    .main {
+        padding: 1.5rem 1rem;
+        margin: 0;
         align-items: center;
+        text-align: center;
     }
 
-    .booking, .menu {
-        width: 80%;
+    .greeting {
+        font-size: 1.9rem;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 95%;
+        margin-top: 1rem;
+    }
+
+    /* Buttons */
+    .btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .primary,
+    .secondary {
+        width: min(280px, 90%);
+        padding: 1rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    footer {
+        font-size: 1.4rem;
         padding: 1.2rem;
-        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .name {
+        font-size: 1.9rem;
     }
 
-    footer { gap: 1.5rem; }
-    .tagline { font-size: 1.2rem; }
+    .greeting {
+        font-size: 1.6rem;
+    }
 
-    .facebook-icon, .instagram-icon, .youtube-icon {
-        width: 2rem;
-        height: 2rem;
+    .description {
+        font-size: 0.95rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
     }
 }
