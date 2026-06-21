@@ -53,7 +53,7 @@ Add screenshots here for:
 
 ### Mobile View
 
-<img width="600" height="1335" alt="WhatsApp Image 2026-06-21 at 20 01 53" src="https://github.com/user-attachments/assets/4df97c32-2f07-481b-9836-ce8c24ba6f93" />
+<img width="600" height="1195" alt="WhatsApp Image 2026-06-21 at 20 01 53" src="https://github.com/user-attachments/assets/0aca5aed-ee30-4c8b-be37-3fb7fdde89d9" />
 
 ---
 
@@ -195,6 +195,6 @@ This project helped me improve my understanding of:
 B.Sc. Computer Science Student
 Interested in AI/ML, Data Science, Software Engineering, and Frontend Development
 
-GitHub: https://github.com/swarnavabag
+[GitHub](https://github.com/swarnavabag)
 
-LinkedIn: www.linkedin.com/in/swarnava-bag-24285435b
+[LinkedIn](www.linkedin.com/in/swarnava-bag-24285435b)
